@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="PyLotus-alex-claman", # Replace with your own username
+    name="pylotus", # Replace with your own username
     version="1.0.0",
     author="Alex Claman",
     author_email="alexanderclaman@gmail.com",
