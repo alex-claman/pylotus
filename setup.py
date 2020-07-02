@@ -23,9 +23,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     project_urls={
-        'Bug Reports': 'https://github.com/pypa/sampleproject/issues',
-        'Funding': 'https://donate.pypi.org',
-        'Say Thanks!': 'http://saythanks.io/to/example',
-        'Source': 'https://github.com/pypa/sampleproject/',
+        'Bug Reports': 'https://github.com/alex-claman/pylotus/issues',
+        'Source': 'https://github.com/alex-claman/pylotus/'
     },
 )

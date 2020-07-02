@@ -66,6 +66,10 @@ You can also import only the API interface, skipping the prebuilt classes if you
 from pylotus import wf_api
 ```
 
+## Exceptions and Error Handling
+
+There are 3 custom exceptions (termed ```Errors```) in PyLotus: ```NonPlatformError```, raised when the platform passed to the ```wf_api``` constructor is invalid; ```DictTypeError```, raised when incorrect objects (not dicts or not correct dicts) are passed to class constructors; and ```StatusCodeError```, raised when the WarFrame API itself returns a non-200 response. These all have error messages associated with them accessible through ```Error.message```.
+
 ## License
 
 Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license. 
