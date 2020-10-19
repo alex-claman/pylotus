@@ -38,7 +38,7 @@ class Fissure:
 
 
 class CetusInfo:
-	_cetus_keys = ['id', 'activation', 'isDay','expiry', 
+	_cetus_keys = ['id', 'activation', 'isDay','expiry',
 				   'state', 'timeLeft', 'isCetus', 'shortString']
 
 	def __init__(self, cetus_dict):
@@ -123,3 +123,40 @@ class NewsInfo:
 	def get_expected_keys(self):
 		return _news_keys
 
+class Invasion:
+	_invasion_keys = ["defenderReward", "attackingFaction",
+					  "completion", "attackerReward", "count",
+					  "completed", "requiredRuns", "vsInfestation",
+					  "node", "eta", "defendingFaction", "id",
+					  "activation", "rewardTypes", "desc"]
+
+	def __init__(self, invasion_dict):
+		if not isinstance(invasion_dict, dict):
+			raise DictTypeError('Invasion', invasion_dict)
+		for key in self._invasion_keys:
+			if key not in invasion_dict.keys():
+				raise DictTypeError('Invasion', invasion_dict)
+		self.defenderReward = invasion_dict["defenderReward"]
+		self.attackingFaction = invasion_dict["attackingFaction"]
+		self.completion = invasion_dict["completion"]
+		self.attackerReward = invasion_dict["attackerReward"]
+		self.count = invasion_dict["count"]
+		self.completed = invasion_dict["completed"]
+		self.requiredRuns = invasion_dict["requiredRuns"]
+		self.vsInfestation = invasion_dict["vsInfestation"]
+		self.node = invasion_dict["node"]
+		self.eta = invasion_dict["eta"]
+		self.defendingFaction = invasion_dict["defendingFaction"]
+		self.id = invasion_dict["id"]
+		self.activation = invasion_dict["activation"]
+		self.rewardTypes = invasion_dict["rewardTypes"]
+		self.desc = invasion_dict["desc"]
+
+	def to_string(self):
+		self_string = ''
+		for k, v in vars(self).items():
+			self_string += k + ': ' + str(v) + '\n'
+		return self_string
+
+	def get_expected_keys(self):
+		return _invasion_keys

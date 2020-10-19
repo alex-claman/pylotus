@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pylotus", # Replace with your own username
-    version="1.0.0",
+    version="1.1.0",
     author="Alex Claman",
     author_email="alexanderclaman@gmail.com",
     description="A simple Python wrapper for the WarFrame API",
